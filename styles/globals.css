@@ -1,16 +1,80 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.my-bg {
+
+  background-image: radial-gradient(circle at 1% 52%, rgba(139, 139, 139,0.05) 0%, rgba(139, 139, 139,0.05) 50%, rgba(21, 21, 21,0.05) 50%, rgba(21, 21, 21,0.05) 100%), radial-gradient(circle at 41% 28%, rgba(81, 81, 81,0.05) 0%, rgba(81, 81, 81,0.05) 50%, rgba(7, 7, 7,0.05) 50%, rgba(7, 7, 7,0.05) 100%), radial-gradient(circle at 48% 1%, rgba(93, 93, 93,0.05) 0%, rgba(93, 93, 93,0.05) 50%, rgba(7, 7, 7,0.05) 50%, rgba(7, 7, 7,0.05) 100%), linear-gradient(
+    255deg, rgb(156, 41, 132), rgb(47, 14, 122)) !important;  
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
+@layer utilities {
+    .yol {
+        @apply  border-b-4 font-bold cursor-pointer border-yellow-400 hover:text-yellow-400 ;
+
+    }
+
+    .animation-delay-2000 {
+        animation-delay: 2s
+    }
+    
+    .animation-delay-4000 {
+        animation-delay: 4s
+    }
+
+
+    .animation-delay-1000 {
+        animation-delay: 1s
+    }
+
+
+
+  }
+
+
+@layer base {
+    body {
+
+        @apply bg-black
+    }
+
+
+
+    h1 {
+        @apply text-xl;
+      }
+      
+    h2 {
+        @apply text-3xl font-extrabold font-inter text-purple-600 pb-4
+
+    }
+
+    h3 {
+        @apply text-xl pb-3;
+    }
+
+    h4 {
+        @apply text-lg pb-4 font-semibold;
+        }
+
+    p {
+        @apply text-blueGray-400  font-medium text-base ;
+    }
+
+    li {
+    @apply text-gray-600 font-normal text-lg
+    }
+
+    a {
+    @apply cursor-pointer;
+    
+    }
+    /* Custom underlines links*/
+    yol {
+        @apply  border-b-4 font-bold cursor-pointer border-yellow-400 hover:text-yellow-400 ;
+    }
 }
