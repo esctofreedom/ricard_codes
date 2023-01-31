@@ -3,8 +3,6 @@ import useDarkMode from "./useDarkMode";
 import { LightBulbIcon, MoonIcon } from '@heroicons/react/outline'
 
 
-
-
 export const Dark = () => {
 
   const [colorTheme, setTheme] = useDarkMode();

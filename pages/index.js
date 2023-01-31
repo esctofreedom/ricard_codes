@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { ButtonOne } from '../components/ButtonOne'
-import { Hero } from '../components/Hero'
-import { Skills } from '../components/Skills'
-
+import Head from "next/head";
+import Image from "next/image";
+import { ButtonOne } from "../components/ButtonOne";
+import { Hero } from "../components/Hero";
+import { Projects } from "../components/Projects";
+import { Skills } from "../components/Skills";
+import { Timeline } from "../components/Timeline";
 
 export default function Home() {
   return (
@@ -14,18 +15,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className=" p-0" >
+      <main className=" p-0 max-w-7xl mx-auto">
+        <Hero />
 
-      <Hero />
+        <Skills />
 
-      <Skills />
+        <Projects />
 
-
-        
-
+        <Timeline />
       </main>
-
-        
     </div>
-  )
+  );
 }

@@ -5,6 +5,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+/* @import url("/public/fonts/sofia-400.woff2"); */
+
 .my-bg {
 
   background-image: radial-gradient(circle at 1% 52%, rgba(139, 139, 139,0.05) 0%, rgba(139, 139, 139,0.05) 50%, rgba(21, 21, 21,0.05) 50%, rgba(21, 21, 21,0.05) 100%), radial-gradient(circle at 41% 28%, rgba(81, 81, 81,0.05) 0%, rgba(81, 81, 81,0.05) 50%, rgba(7, 7, 7,0.05) 50%, rgba(7, 7, 7,0.05) 100%), radial-gradient(circle at 48% 1%, rgba(93, 93, 93,0.05) 0%, rgba(93, 93, 93,0.05) 50%, rgba(7, 7, 7,0.05) 50%, rgba(7, 7, 7,0.05) 100%), linear-gradient(
@@ -39,30 +41,31 @@
 @layer base {
     body {
 
-        @apply bg-black
+        @apply dark:bg-black bg-white
     }
 
 
 
     h1 {
-        @apply text-xl;
+        @apply text-4xl font-inter font-semibold text-slate-900 dark:text-slate-200;
       }
       
     h2 {
-        @apply text-3xl font-extrabold font-inter text-purple-600 pb-4
-
+        @apply text-3xl font-inter font-semibold text-slate-900 dark:text-slate-200;
     }
 
+    
+
     h3 {
-        @apply text-xl pb-3;
+        @apply text-2xl font-inter font-semibold text-slate-900 dark:text-slate-200;
     }
 
     h4 {
-        @apply text-lg pb-4 font-semibold;
-        }
+        @apply text-xl font-inter  font-semibold text-slate-900 dark:text-slate-200;
+    }
 
     p {
-        @apply text-blueGray-400  font-medium text-base ;
+        @apply text-slate-500 dark:text-zinc-400 font-medium text-base font-inter ;
     }
 
     li {
@@ -70,7 +73,7 @@
     }
 
     a {
-    @apply cursor-pointer;
+    @apply cursor-pointer font-semibold text-xl text-slate-700 dark:text-slate-200 hover:text-brand-primary dark:hover:text-brand-secondary  transition-all ease-in-out whitespace-nowrap
     
     }
     /* Custom underlines links*/
