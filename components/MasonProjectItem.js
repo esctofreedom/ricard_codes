@@ -1,11 +1,5 @@
 import Image from "next/image";
-import {
-  GlobeAltIcon,
-  InformationCircleIcon,
-  LightBulbIcon,
-  MoonIcon,
-  PlayIcon,
-} from "@heroicons/react/solid";
+
 import { Pill } from "./Pill";
 
 export const MasonProjectItem = ({ name, img, description, color }) => {

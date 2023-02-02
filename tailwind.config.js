@@ -23,24 +23,50 @@ module.exports = {
         },
       },
     },
-    keyframes: {
-      levitate: {
-        "0%, 100%": { transform: "translateY(15px)" },
 
-        "50%": { transform: "translateY(-15px)" },
+    keyframes: {
+      spinClockwise: {
+        "0%, 100%": { transform: "rotate(0deg)" },
+        "50%": { transform: "rotate(360deg)" },
       },
 
-      blob: {
-        "0%, 100%": { transform: "translate(0px, 0px) scale(1)" },
-        "33%": { transform: "translate(20px, -20px) scale(1.1)" },
-        "66%": { transform: " translate(-20px, 20px)scale(0.9)" },
+      spinAntiClockwise: {
+        "0%, 100%": { transform: "rotate(0deg)" },
+        "50%": { transform: "rotate(-360deg)" },
       },
     },
 
     animation: {
-      levitate: "levitate 6s ease-in-out infinite",
-      blob: "blob 10s ease-in-out infinite",
+      spin1: "spinClockwise 10s linear infinite",
+      spin2: "spinAntiClockwise 10s linear infinite",
+      spin3: "spinClockwise 15s linear infinite",
+      spin4: "spinAntiClockwise 15s linear infinite",
     },
+
+    // keyframes: {
+    //   levitate: {
+    //     "0%, 100%": { transform: "translateY(15px)" },
+
+    //     "50%": { transform: "translateY(-15px)" },
+    //   },
+
+    //   blob: {
+    //     "0%, 100%": { transform: "translate(0px, 0px) scale(1)" },
+    //     "33%": { transform: "translate(20px, -20px) scale(1.1)" },
+    //     "66%": { transform: " translate(-20px, 20px) scale(0.9)" },
+    //   },
+
+    //   pulse: {
+    //     "0%, 100%": { transform: "scale(1) opacity(1)" },
+    //     "50%": { transform: "scale(1.1) opacity(0.4)" },
+    //   },
+    // },
+
+    // animation: {
+    //   levitate: "levitate 6s ease-in-out infinite",
+    //   blob: "blob 10s ease-in-out infinite",
+    //   pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+    // },
   },
   // variants: {
   //   extend: {

@@ -1,3 +1,4 @@
+import { CommandLineIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { ButtonOne } from "./ButtonOne";
@@ -30,27 +31,42 @@ export const Header = () => {
       }`}
     >
       <div className="flex w-full md:max-w-6xl min-w-min mx-auto items-center ">
-        <span
-          className=" text-xl md:text-2xl font-inter  text-transparent font-bold bg-clip-text bg-gradient-to-r 
+        <div className="flex gap-2 items-center mb-4 justify-center">
+          <CommandLineIcon className="h-7 w-7 text-purple-600 dark:text-emerald-400" />
+          <span
+            className=" text-xl md:text-2xl font-inter  text-transparent font-bold bg-clip-text bg-gradient-to-r 
       
-            dark:from-green-500  dark:to-cyan-500 
+            dark:from-green-400  dark:to-cyan-500 
             from-purple-600  to-pink-500 
             "
-        >
-          Ricard Codes
-        </span>
+          >
+            Ricard Codes
+          </span>
+        </div>
 
         <div className="flex-grow"></div>
 
         {/* link to projects */}
         <div className="flex gap-8 items-center ">
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills & Tools</a>
+          <button
+            onClick={() => {
+              const target = document.querySelector("#projects");
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+          >
+            <a>Projects</a>
+          </button>
+          <button
+            onClick={() => {
+              const target = document.querySelector("#skills");
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+          >
+            <a>Skills & Tools</a>
+          </button>
 
-          <ButtonOutline
-            text="Contact"
-            onClick={() => router.push("/#contact")}
-          />
+          <ButtonOutline text="Contact" />
+
           <Dark />
         </div>
       </div>

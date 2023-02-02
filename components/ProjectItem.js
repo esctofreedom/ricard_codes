@@ -5,7 +5,7 @@ import {
   LightBulbIcon,
   MoonIcon,
   PlayIcon,
-} from "@heroicons/react/solid";
+} from "@heroicons/react/24/outline";
 
 export const ProjectItem = ({ name, img, description }) => {
   return (
