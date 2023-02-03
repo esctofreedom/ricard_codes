@@ -16,6 +16,7 @@ import { TailwindLogo } from "./logos/TailwindLogo";
 import { TypescriptLogo } from "./logos/TypescriptLogo";
 import { NewSkillItem } from "./NewSkillItem";
 import { SkillItem } from "./SkillItem";
+import { techItems } from "./TECHITEMS";
 
 export const Skills = () => {
   return (
@@ -34,96 +35,16 @@ export const Skills = () => {
         </p>
 
         <div className="w-full grid gap-4  grid-cols-1 md:grid-cols-4 lg:grid-cols-7">
-          <NewSkillItem
-            name="Javascript"
-            logo={<JavascriptLogo />}
-            description="Javascript takes Html and CSS and gives it life! It allows me to create any interactions you need."
-          />
-
-          <NewSkillItem
-            name="Typescript"
-            logo={<TypescriptLogo />}
-            description="Typescript is a type-safe version of Javascript that's quickly becomign the defacto."
-          />
-          <NewSkillItem
-            name="React"
-            logo={<ReactLogo />}
-            description="A Javascript framework created by Meta - made to build user interfaces such as website or dashboards."
-          />
-          <NewSkillItem
-            name="Next.js"
-            logo={
-              <NextLogo className="fill-current  text-black dark:text-slate-200" />
-            }
-            description="Next.js takes React to the next (pun intended) level and creates blazing-fast experiences."
-          />
-          <NewSkillItem
-            name="Tailwind"
-            logo={<TailwindLogo />}
-            description="A modern css toolset that makes me much quicker at building pretty things!"
-          />
-          <NewSkillItem
-            name="Python"
-            logo={<PythonLogo />}
-            description="Python is a modern programming language that lets you create anything."
-          />
-          <NewSkillItem
-            name="Django"
-            logo={
-              <DjangoLogo className="fill-current dark:text-green-800 text-green-900" />
-            }
-            description="Django is a python framework which gives me full control over the back-end."
-          />
-          <NewSkillItem
-            name="Pandas"
-            logo={
-              <PandasLogo className="fill-current dark:text-blueGray-300 text-sky-900" />
-            }
-            description="Pandas is a possibly the best data science tool. Great for serious number-crunching. "
-          />
-          <NewSkillItem
-            name="Postgres"
-            logo={<PostgresLogo />}
-            description="Postgres is a SQL database system to store information and retrieve it."
-          />
-          {/* <NewSkillItem
-            name="Html"
-            logo={<HtmlLogo />}
-            description="The skeleton of a website or app. This is all there was in the 90s..."
-          /> */}
-          <NewSkillItem
-            name="CSS"
-            logo={<CssLogo />}
-            description="If Html is the skeleton, CSS makes it pretty - flesh, skin... even a dress!"
-          />
-
-          <NewSkillItem
-            name="Supabase"
-            logo={<SupabaseLogo />}
-            description="A database-as-a-service takes minutes to set up"
-          />
-
-          <NewSkillItem
-            name="Node JS"
-            logo={<NodeJsLogo />}
-            description="A database-as-a-service takes minutes to set up"
-          />
-
-          <NewSkillItem
-            name="Prisma"
-            logo={<PrismaLogo />}
-            description="Prisma allows interaction between an API and the frontend in the simplest way possible."
-          />
-
-          <NewSkillItem
-            name="React Query"
-            logo={<ReactQueryLogo />}
-            description="Recnetly rebranded as Tanstack Query, it's a great way to handle data fetching and caching in React."
-          />
+          {techItems.map((item) => (
+            <NewSkillItem
+              name={item.name}
+              Logo={item.logo}
+              description={item.description}
+            />
+          ))}
 
           {/* React Native */}
-          {/* Supabase */}
-          {/* Prisma */}
+
           {/* Photoshop */}
           {/* Figma */}
         </div>

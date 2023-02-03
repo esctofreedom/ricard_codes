@@ -26,23 +26,29 @@ export const Header = () => {
     <header
       className={`z-50 sticky top-0 px-4 bg-white dark:bg-black   backdrop-filter  backdrop-blur-lg  ${
         headerBg
-          ? "transition ease-in-out shadow-lg py-4 bg-opacity-80"
+          ? "transition ease-in-out shadow-lg py-4 bg-opacity-70"
           : "shadow-none py-4"
       }`}
     >
       <div className="flex w-full md:max-w-6xl min-w-min mx-auto items-center ">
-        <div className="flex gap-2 items-center mb-4 justify-center">
-          <CommandLineIcon className="h-7 w-7 text-purple-600 dark:text-emerald-400" />
-          <span
-            className=" text-xl md:text-2xl font-inter  text-transparent font-bold bg-clip-text bg-gradient-to-r 
+        <button
+          onClick={() => {
+            scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          <div className="flex gap-2 items-center  justify-center">
+            <CommandLineIcon className="h-7 w-7 text-purple-600 dark:text-emerald-400" />
+            <span
+              className=" text-xl md:text-2xl font-inter  text-transparent font-bold bg-clip-text bg-gradient-to-r 
       
             dark:from-green-400  dark:to-cyan-500 
             from-purple-600  to-pink-500 
             "
-          >
-            Ricard Codes
-          </span>
-        </div>
+            >
+              Ricard Codes
+            </span>
+          </div>
+        </button>
 
         <div className="flex-grow"></div>
 
@@ -51,7 +57,10 @@ export const Header = () => {
           <button
             onClick={() => {
               const target = document.querySelector("#projects");
-              target.scrollIntoView({ behavior: "smooth", block: "start" });
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
             }}
           >
             <a>Projects</a>

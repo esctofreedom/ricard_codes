@@ -50,7 +50,7 @@ export const Hero = () => {
             their needs.
           </p>
 
-          <div className="flex gap-6">
+          <div className="flex gap-6 w-full my-4">
             <ButtonOne
               text="Let's Talk"
               onClick={() =>

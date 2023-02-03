@@ -1,55 +1,99 @@
-import Image from "next/image";
-import {
-  GlobeAltIcon,
-  InformationCircleIcon,
-  LightBulbIcon,
-  MoonIcon,
-  PlayIcon,
-} from "@heroicons/react/24/outline";
+import { TechPill } from "./TechPill";
+import { ButtonOutline } from "./ButtonOutline";
 
-export const ProjectItem = ({ name, img, description }) => {
+export const ProjectItem = ({
+  name,
+  tech,
+
+  tagline,
+  description,
+  images,
+  url,
+}) => {
   return (
-    <div className="hidden md:block group relative bg-white dark:bg-blueGray-800 shadow-md hover:shadow-lg rounded-md md:p-6 p-8 lg:p-4 mx-1 my-1">
-      <h4
-        className="text-center text-blueGray-300 dark:text-blueGray-500  group-hover:text-blueGray-400
-            transition ease-in-out transform group-hover:scale-110"
-      >
-        {name}
-      </h4>
+    <div
+      className={` min-h-[500px]   bg-white overflow-clip h-min dark:bg-slate-900 text-left md:flex md:flex-col group relative  shadow-2xl rounded-md md:p-6 p-8 lg:p-8 mx-1 my-1`}
+    >
+      {/* Top Texts */}
 
-      <Image
-        src={img}
-        height={553}
-        width={979}
-        priority={true}
-        className="transition ease-in-out group-hover:opacity-10"
-      />
+      <div className="w-full relative grid grid-cols-8 gap-4 flex-grow">
+        <div className="col-span-3 flex flex-col gap-2  ">
+          <div className=" mb-6">
+            {/* <div className="absolute h-full w-full rounded-full bg-red-100 top-0 left-0 rotate-45 -translate-y-2/4 z-0" /> */}
 
-      <div
-        className="absolute top-0 mt-16 opacity-0 transition ease-in-out group-hover:opacity-100
-            hover:top-10 p-1 cursor-default"
-      >
-        <p className="text-md font-medium text-blueGray-500">{description}</p>
-      </div>
+            <div className="w-full  mb-2 flex">
+              <div className="flex-1 gap-2">
+                {/* {tags?.map((tag) => (
+              <Pill key={tag} text={tag} color={"bg-black z-10"} />
+            ))} */}
 
-      {/* tools */}
+                <h6 className="">{tagline}</h6>
+              </div>
 
-      <div className="w-full flex justify-center space-x-5 opacity-0 transition ease-in-out group-hover:opacity-100 ">
-        <PlayIcon
-          className="dark:text-green-500 text-purple-600 transform transition ease-in-out hover:scale-110 cursor-pointer"
-          height={"2rem"}
-          width={"2rem"}
-        />
-        <GlobeAltIcon
-          className="dark:text-amber-500 text-amber-500 transform transition ease-in-out hover:scale-110 cursor-pointer"
-          height={"2rem"}
-          width={"2rem"}
-        />
-        <InformationCircleIcon
-          className="dark:text-sky-600 text-pink-500 transform transition ease-in-out hover:scale-110 cursor-pointer"
-          height={"2rem"}
-          width={"2rem"}
-        />
+              {/* <div className=" gap-2 bg-blue-100 flex">
+            {tech?.map((tech) => (
+              <TechPill key={tech} name={tech} />
+            ))}
+          </div> */}
+            </div>
+
+            <h3
+              className="  text-3xl mb-2
+         "
+            >
+              {name}
+            </h3>
+          </div>
+
+          {/* Description */}
+          <p
+            className={` text-slate-800/70 font-medium text-base mb-4
+      `}
+          >
+            {description?.map((desc) => (
+              <div className="mb-4">
+                <span className="" key={desc}>
+                  {desc}
+                </span>
+                <br />
+              </div>
+            ))}
+          </p>
+
+          {/* Tech */}
+          <h5 className="font-inter text-sm font-semibold text-slate-400">
+            Tech used:
+          </h5>
+
+          <div className=" gap-2  flex flex-row w-full   h-auto">
+            {tech?.map((tech) => (
+              <TechPill key={tech} name={tech} />
+            ))}
+          </div>
+
+          <div className="flex-grow" />
+
+          {/* CTA */}
+          <div className="w-min">
+            {" "}
+            <ButtonOutline text={"View Project"} href={url} />
+          </div>
+        </div>
+
+        {/* Area for Images */}
+
+        <div className="col-span-5 relative flex-grow  w-full  p-8">
+          <img
+            src={images.big && images.big}
+            className=" absolute z-30  -right-[10px]  top-[150px]     rounded-lg shadow-2xl"
+            width={250}
+          />
+          <img
+            src={images.small && images.small}
+            className="absolute  shadow-lg rounded-xl z-20"
+            height={800}
+          />
+        </div>
       </div>
     </div>
   );

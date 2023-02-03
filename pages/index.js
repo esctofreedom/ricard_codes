@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import { BottomCTA } from "../components/BottomCTA";
-import { ButtonOne } from "../components/ButtonOne";
+
 import { Hero } from "../components/Hero";
 import { Projects } from "../components/Projects";
 import { Skills } from "../components/Skills";
-import { Timeline } from "../components/Timeline";
+
 import { Footer } from "../components/Footer";
+import { Services } from "../components/Services";
 
 export default function Home() {
   return (
@@ -20,11 +21,13 @@ export default function Home() {
       <main className=" p-0 mx-auto">
         <Hero />
 
+        <Services />
+
         <Skills />
 
         <Projects />
 
-        <Timeline />
+        {/* <Timeline /> */}
 
         <BottomCTA />
       </main>
