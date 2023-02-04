@@ -4,7 +4,6 @@ import { ButtonOutline } from "./ButtonOutline";
 export const ProjectItem = ({
   name,
   tech,
-
   tagline,
   description,
   images,
@@ -51,10 +50,8 @@ export const ProjectItem = ({
       `}
           >
             {description?.map((desc) => (
-              <div className="mb-4">
-                <span className="" key={desc}>
-                  {desc}
-                </span>
+              <div className="mb-4" key={desc}>
+                <span className="">{desc}</span>
                 <br />
               </div>
             ))}

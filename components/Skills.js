@@ -37,6 +37,7 @@ export const Skills = () => {
         <div className="w-full grid gap-4  grid-cols-1 md:grid-cols-4 lg:grid-cols-7">
           {techItems.map((item) => (
             <NewSkillItem
+              key={item.name}
               name={item.name}
               Logo={item.logo}
               description={item.description}

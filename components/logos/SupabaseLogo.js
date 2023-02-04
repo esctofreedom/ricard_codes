@@ -10,8 +10,8 @@ export const SupabaseLogo = (props) => {
           y2="44.0710077%"
           id="supabase-linearGradient-1"
         >
-          <stop stop-color="#249361" offset="0%" />
-          <stop stop-color="#3ECF8E" offset="100%" />
+          <stop stopColor="#249361" offset="0%" />
+          <stop stopColor="#3ECF8E" offset="100%" />
         </linearGradient>
         <linearGradient
           x1="1.99116498%"
@@ -20,8 +20,8 @@ export const SupabaseLogo = (props) => {
           y2="34.708062%"
           id="supabase-linearGradient-2"
         >
-          <stop stop-color="#000000" offset="0%" />
-          <stop stop-color="#000000" stop-opacity="0" offset="100%" />
+          <stop stopColor="#000000" offset="0%" />
+          <stop stopColor="#000000" stopOpacity="0" offset="100%" />
         </linearGradient>
       </defs>
       <g>
@@ -31,7 +31,7 @@ export const SupabaseLogo = (props) => {
         />
         <path
           d="M149.601512,258.578826 C142.884085,267.038157 129.263882,262.403261 129.102024,251.601817 L126.735244,93.6176533 L232.963622,93.6176533 C252.204429,93.6176533 262.935398,115.840956 250.971119,130.909887 L149.601512,258.578826 Z"
-          fill-opacity="0.2"
+          fillOpacity="0.2"
           fill="url(#supabase-linearGradient-2)"
         />
         <path
