@@ -59,7 +59,7 @@ export const Projects = () => {
             name="Lily La Rosa"
             title="Founder - Glitter Girls Burlesque"
             testimonial={`We needed a management system for out dance academy, and Ricard over-delivered. He was able to build a system that was easy to use, and is saving us dozens of hours per week.`}
-            image="/testimonials/lily_la_rosa.jpg"
+            image="/testimonials/lily.jpg"
           />
           <Testimonial
             name="Peter Felton"
