@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Testimonial = ({ name, title, testimonial, image }) => {
   return (
-    <div className="relative flex flex-col shadow-2xl rounded-md bg-white dark:bg-slate-900 p-6 text-center h-min ">
+    <div className="relative flex flex-col  md:shadow-xl rounded-md bg-white dark:bg-slate-900 p-6 text-center h-min my-6">
       <div className="w-full absolute -top-10 left-0 ">
         {" "}
         <img

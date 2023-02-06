@@ -1,26 +1,29 @@
-import { CommandLineIcon } from "@heroicons/react/24/outline";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import { ButtonOne } from "./ButtonOne";
-import { ButtonOutline } from "./ButtonOutline";
+import {
+  Bars3Icon,
+  CommandLineIcon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+
+import { useState } from "react";
+
+import { Button } from "./Button";
 import { Dark } from "./Dark";
 
-export const Header = () => {
+export const Header = ({ showMobileMenu, setShowMobileMenu }) => {
   const [headerBg, setHeaderBg] = useState(false);
 
   // Window is only accessible inside useEffect
-  useEffect(() => {
-    var onScroll = () => {
-      window.scrollY >= 100 ? setHeaderBg(true) : setHeaderBg(false);
-      return window.scrollY;
-    };
+  // useEffect(() => {
 
-    window.addEventListener("scroll", onScroll);
+  //   var onScroll = () => {
+  //     window.scrollY >= 100 ? setHeaderBg(true) : setHeaderBg(false);
+  //     return window.scrollY;
+  //   };
 
-    return onScroll;
-  }, []);
+  //   window.addEventListener("scroll", onScroll);
 
-  const router = useRouter();
+  //   return onScroll;
+  // }, []);
 
   return (
     <header
@@ -53,7 +56,7 @@ export const Header = () => {
         <div className="flex-grow"></div>
 
         {/* link to projects */}
-        <div className="flex gap-8 items-center ">
+        <div className="md:flex gap-6 items-center hidden">
           <button
             onClick={() => {
               const target = document.querySelector("#projects");
@@ -74,9 +77,24 @@ export const Header = () => {
             <a>Skills & Tools</a>
           </button>
 
-          <ButtonOutline text="Contact" />
+          <Button text="Contact" href="mailto:ricard@ricardcodes.com" />
 
           <Dark />
+        </div>
+
+        <div className="flex md:hidden items-center gap-8">
+          <Dark />
+          <button
+            onClick={() => setShowMobileMenu(!showMobileMenu)}
+            className="cursor-pointer hover:scale-110 transition ease-in-out"
+          >
+            {!showMobileMenu && (
+              <Bars3Icon className="h-9 w-9 text-purple-600 dark:text-emerald-400" />
+            )}
+            {showMobileMenu && (
+              <XMarkIcon className="h-9 w-9 text-purple-600 dark:text-emerald-400" />
+            )}
+          </button>
         </div>
       </div>
     </header>

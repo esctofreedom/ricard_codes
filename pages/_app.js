@@ -1,5 +1,8 @@
 import "tailwindcss/tailwind.css";
 import "../styles/globals.css";
+// import scrolly.css
+// import "../styles/scrolly.css";
+
 // import font sofia pro
 // import "../public/fonts/sofia-400.woff2";
 import Layout from "../components/Layout";

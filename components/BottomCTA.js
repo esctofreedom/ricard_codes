@@ -1,34 +1,29 @@
 import dayjs from "dayjs";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ButtonOne } from "./ButtonOne";
+import { Button } from "./Button";
 
 export const BottomCTA = () => {
   return (
-    <div className="w-full  bg-gradient-to-b from-white to-slate-100 dark:from-black dark:to-slate-900">
+    <div className="pt-8 px-8 pb-0 w-full  bg-gradient-to-b from-white to-slate-100 dark:from-black dark:to-slate-900">
       <div className=" max-w-7xl   flex flex-col   mx-auto p-0 ">
-        <div className="w-full  grid grid-cols-8 gap-4">
-          <div className="col-span-5 flex flex-col justify-center p-12">
+        <div className="w-full  flex-col md:grid grid-cols-8 gap-4">
+          <div className="col-span-5 flex flex-col items-center md:items-start justify-center text-center md:text-left">
             <StatusComponent />
             <h2 className="">
               Want me to create something amazing for you? <br /> Let's chat!
             </h2>
-            <div className="w-min">
-              <ButtonOne
+            <div className="w-min py-4">
+              <Button
                 text="Send me an email"
-
-                // onClick opens mailto:hehe@hehe.com
+                href="mailto:ricard@ricardcodes.com"
               />
             </div>
           </div>
 
-          <div className="col-span-3 flex  justify-center items-center  w-full h-full ">
-            <div className=" brightness-110 w-full  h-[350px]">
-              <Image
-                src={"/ricard-small-wedding.png"}
-                height={350}
-                width={438}
-              />
+          <div className="col-span-3 flex   items-center  w-full h-full justify-end  mx-auto">
+            <div className=" brightness-110  mx-auto  h-full">
+              <img src={"/ricard-small-wedding.png"} height={350} width={438} />
               {/* Fade bottom */}
               {/* <div className="h-[15px] w-full absolute bottom-0 bg-gradient-to-b from-transparent to-white dark:to-black"></div> */}
             </div>

@@ -15,26 +15,22 @@ import { SupabaseLogo } from "./logos/SupabaseLogo";
 import { TailwindLogo } from "./logos/TailwindLogo";
 import { TypescriptLogo } from "./logos/TypescriptLogo";
 import { NewSkillItem } from "./NewSkillItem";
+import { SectionTitle } from "./SectionTitle";
 import { SkillItem } from "./SkillItem";
 import { techItems } from "./TECHITEMS";
 
 export const Skills = () => {
   return (
-    <div className=" w-full   py-5   flex-col   mx-auto " id="skills">
-      <div className="max-w-6xl mx-auto my-12">
-        <div className="flex gap-4 items-center mb-4 justify-center">
-          <WrenchScrewdriverIcon className="h-8 w-8 text-slate-400" />
-          <h2 className=" md:text-2xl lg:text-3xl  font-inter font-semibold text-center  ">
-            My Skills & Tools
-          </h2>
-        </div>
+    <div className="section" id="skills">
+      <div className="max-w-6xl mx-auto">
+        <SectionTitle
+          title=" My Skills & Tools"
+          description="As the saying goes, a man is only as good as his tools. These are
+          mine:"
+          Logo={WrenchScrewdriverIcon}
+        />
 
-        <p className="text-xl text-center font-medium   mb-8">
-          As the saying goes, a man is only as good as his tools. These are
-          mine:
-        </p>
-
-        <div className="w-full grid gap-4  grid-cols-1 md:grid-cols-4 lg:grid-cols-7">
+        <div className="w-full grid gap-1 md:gap-4  grid-cols-4 md:grid-cols-5 lg:grid-cols-7">
           {techItems.map((item) => (
             <NewSkillItem
               key={item.name}

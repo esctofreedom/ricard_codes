@@ -1,23 +1,20 @@
 import { BeakerIcon } from "@heroicons/react/24/outline";
 import { MasonProjectItem } from "./MasonProjectItem";
 import { ProjectItem } from "./ProjectItem";
+import { SectionTitle } from "./SectionTitle";
 import { Testimonial } from "./Testimonial";
 
 export const Projects = () => {
   return (
-    <div className="w-full bg-slate-100 dark:bg-black" id="projects">
-      <div className=" max-w-7xl text-center px-10 py-16  flex flex-col   mx-auto p-0 ">
-        <div className="flex gap-4 items-center mb-4 justify-center">
-          <BeakerIcon className="h-8 w-8 text-slate-400" />
-          <h2 className=" md:text-2xl lg:text-3xl  font-inter font-semibold text-center  ">
-            My Projects
-          </h2>
-        </div>
-
-        <p className="text-xl text-center font-medium   mb-8">
-          I love building things. Below are a few examples of solutions I've
-          created for my clients (and myself).
-        </p>
+    <div className="section bg-slate-100 dark:bg-black" id="projects">
+      <div className=" max-w-7xl text-center   flex flex-col   mx-auto p-0 ">
+        <SectionTitle
+          title="Projects"
+          description="
+            I love building things. Below are a few examples of solutions I've
+            created for my clients (and myself)."
+          Logo={BeakerIcon}
+        />
 
         {/* Dividend Compass */}
         <ProjectItem
@@ -46,11 +43,12 @@ export const Projects = () => {
             `This a fully functional SaaS with hundreds of users and customers, which is personally run and manage.`,
           ]}
           url="https://dividendcompass.com"
+          gitHub="https://github.com/esctofreedom/DC2.0"
         />
 
         {/* Testimonials */}
 
-        <div className="grid grid-cols-3 gap-8 my-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-16">
           <Testimonial
             name="Will Petric"
             title="Founder & CEO - Rockify"
@@ -88,6 +86,7 @@ export const Projects = () => {
             This was a fun project that I built in one day which uses the Open Movie Database API.`,
           ]}
           url="https://howoldwerethey.vercel.app/"
+          gitHub="https://github.com/esctofreedom/howoldwerethey"
         />
 
         <div></div>
