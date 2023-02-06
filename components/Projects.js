@@ -32,8 +32,8 @@ export const Projects = () => {
           // tags={["Financial App"]}
           tagline="Financial SaaS"
           images={{
-            big: "/portfolios-mobile.jpg",
-            small: "/portfolio-desktop.jpg",
+            big: "/dc_mobile.jpg",
+            small: "/dc_desktop.jpg",
           }}
           description={[
             `Dividend Compass is a SaaS made for dividend investors. It's a tool that allows the average investor to find great stocks, 
@@ -78,8 +78,8 @@ export const Projects = () => {
           // tags={["Financial App"]}
           tagline="API Movie App"
           images={{
-            small: "/howt-big.jpg",
-            big: "/howt-small.jpg",
+            small: "/howt_big.jpg",
+            big: "/howt_small.jpg",
           }}
           description={[
             `A simple Next JS website that allows you to find out how old an actor or acrtress was when they filmed a movie. 
