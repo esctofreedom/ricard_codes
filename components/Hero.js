@@ -32,7 +32,7 @@ export const Hero = () => {
 
   return (
     <div className="w-full bg-gradient-to-b from-white to-slate-100 dark:from-black dark:to-slate-900">
-      <div className="flex flex-col h-auto md:h-auto md:flex-row w-full md:max-w-7xl mx-auto p-0 ">
+      <div className="flex flex-col h-auto md:h-auto md:flex-row w-full md:max-w-7xl mx-auto p-0 pt-12">
         {/* Title & Button Section */}
         <div className="w-full p-8 md:mx-6 md:w-2/4 h-auto flex flex-col md:flex-grow  md:pl-10 items-center md:items-start justify-center">
           {/* <p className="text-brand-text font-medium text-2xl mb-4">

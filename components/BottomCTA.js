@@ -10,9 +10,7 @@ export const BottomCTA = () => {
         <div className="w-full  flex-col md:grid grid-cols-8 gap-4">
           <div className="col-span-5 flex flex-col items-center md:items-start justify-center text-center md:text-left">
             <StatusComponent />
-            <h2 className="">
-              Want me to create something amazing for you? <br /> Let's chat!
-            </h2>
+            <h2 className="">Want me to create something amazing for you?</h2>
             <div className="w-min py-4">
               <Button
                 text="Send me an email"
